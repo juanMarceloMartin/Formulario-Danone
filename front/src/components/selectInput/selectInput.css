@@ -1,0 +1,19 @@
+.select {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+
+}
+
+label {
+  font-size: 75%;
+  color: white;
+}
+
+.css-g1d714-ValueContainer, .css-1hb7zxy-IndicatorsContainer {
+  border: 1px solid #008ac9;
+}
+
+.css-1okebmr-indicatorSeparator, .css-tlfecz-indicatorContainer, svg {
+  color:  #008ac9;
+}

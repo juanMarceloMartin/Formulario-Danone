@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+nav {
+  background-color: #164599;
+  height: 40;
+  margin-bottom: 56px;
+}
+
+nav img {
+  height: 80px;
+}
+
+footer {
+  background-color: #0F2370;
+  height: 90px;
+  margin-top: 56px;
+}
+
+footer img {
+  float: right;
+  height: 85px;
+}
+
+.has-float-label {
+  color: #808689;
+  display: inline-block;
+  width: 100%;
+}
+
+#suggestion {
+  height: 32px;
+  border-radius: 4px;
+  width: 100%;
+  border: 1px solid #008ac9;
+}
+
+.has-float-label input {
+  background-color: #fff;
+  /* color: white; */
+  border-bottom: 2px solid #008ac9;
+}
+
+.has-float-label input:focus {
+  border-bottom: 2px solid #008ac9;
+}
+
+input {
+  width: 100%;
+}
+
+.form-group {
+  display: inline-block;
+  width: 100%;
+}
+
+.form-group label {
+  color: #808689
+}
+
+.loading {
+  color: white;
+}
+
+.form-control-file {
+  border: 1px solid white;
+  color: white;
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #7ac142;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #7ac142;
+  }
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.submitButton {
+  background-color: #008ac9;
+  color: #fff;
+  width: "90%";
+  margin-bottom: "20px"
+}
+

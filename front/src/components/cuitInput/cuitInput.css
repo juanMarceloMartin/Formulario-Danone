@@ -1,0 +1,12 @@
+.errorMsg {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 80%;
+}
+
+.loader {
+  background: url("../../images/loading.svg") no-repeat right center;
+}
