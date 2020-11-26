@@ -4,7 +4,11 @@ import fetchCuit from "../../helpers/fetchCuit";
 import "./cuitInput.css";
 import itemCheck from "../../helpers/itemCheck";
 
-const CuitInput = ({ sendDataFromChild, sendCuitErrorFromChild, handleRepeatedCuit }) => {
+const CuitInput = ({
+  sendDataFromChild,
+  sendCuitErrorFromChild,
+  handleRepeatedCuit,
+}) => {
   const TIME_LIMIT = 1500;
   let afipValidated = false;
   let typingTimer = null;
@@ -22,6 +26,7 @@ const CuitInput = ({ sendDataFromChild, sendCuitErrorFromChild, handleRepeatedCu
       setLoading(true);
       let test = await fetchCuit(cuit);
       afipValidated = !test.errorGetData;
+      console.log(afipValidated);
       setLoading(false);
       if (afipValidated) {
         sendCuitErrorFromChild(false);
@@ -30,7 +35,11 @@ const CuitInput = ({ sendDataFromChild, sendCuitErrorFromChild, handleRepeatedCu
         sendCuitErrorFromChild(true);
       }
     } else {
-      setErrorMsg("No es un formato valido");
+      if (/^[0-9]*$/.test(cuit)) {
+        setErrorMsg("El CUIT ingresado no existe");
+      } else {
+        setErrorMsg("No es un formato valido");
+      }
       sendCuitErrorFromChild(true);
     }
   };
@@ -46,12 +55,12 @@ const CuitInput = ({ sendDataFromChild, sendCuitErrorFromChild, handleRepeatedCu
       }
       sendDataFromChild("cuit", val);
     }, TIME_LIMIT);
-    itemCheck("cuit", e.target.value, setCuitExistsError)
+    itemCheck("cuit", e.target.value, setCuitExistsError);
   };
 
   const handleBlur = (e) => {
     handleRepeatedCuit(cuitExistsError);
-  }
+  };
 
   useEffect(() => {
     return () => {
@@ -72,7 +81,11 @@ const CuitInput = ({ sendDataFromChild, sendCuitErrorFromChild, handleRepeatedCu
       />
       <label htmlFor="cuit ">Nro. CUIT</label>
       {errorMsg != null && <div className="errorMsg">{errorMsg}</div>}
-      {cuitExistsError && <div className="errorMsg">El CUIT ingresado ya existe en la base de datos</div>}
+      {cuitExistsError && (
+        <div className="errorMsg">
+          El CUIT ingresado ya existe en la base de datos
+        </div>
+      )}
     </div>
   );
 };
