@@ -1,7 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-require('dotenv').config();
+require("dotenv").config();
 const cronTask = require("./helpers/cronTask");
+const path = require("path");
 
 const PORT = process.env.PORT || 3001;
 
@@ -26,7 +27,9 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/", (req, res) => res.send("ok"));
+app.get("/", (req, res) =>
+  res.sendFile(path.join(__dirname, "/front/public/index.html"))
+);
 app.use("/users", require("./routes/users"));
 app.use("/email", require("./routes/emailExists"));
 app.use("/phone", require("./routes/phoneExists"));
