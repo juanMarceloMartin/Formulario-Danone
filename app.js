@@ -38,7 +38,7 @@ app.use("/phone", require("./routes/phoneExists"));
 app.use("/cuit", require("./routes/cuitExists"));
 
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'front/src/public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'front/public', 'index.html'));
 });
 
 app.listen(PORT, console.log("Server started on port " + PORT));
