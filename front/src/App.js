@@ -14,7 +14,7 @@ import EmptyErrorMsg from "./components/EmptyErrorMsg/emptyErrorMsg";
 import NotUniqueErrorMsg from "./components/notUniqueErrorMsg/notUniqueErrorMsg";
 import itemCheck from "./helpers/itemCheck";
 import Modal from "react-modal";
-import TimePickerInput from './components/timePickerInput/timePickerInput';
+import TimePickerInput from "./components/timePickerInput/timePickerInput";
 
 Modal.setAppElement("#root");
 export default function App() {
@@ -45,7 +45,7 @@ export default function App() {
       state,
       zipCode,
       lat,
-      lng
+      lng,
     });
     setDisplayInput({ display: "" });
   };
@@ -249,7 +249,7 @@ export default function App() {
               backgroundColor: "#fff",
               color: "#0F2370",
               textAlign: "center",
-              fontFamily: "'Pacifico', cursive"
+              fontFamily: "'Pacifico', cursive",
             },
           }}
         >
@@ -275,7 +275,7 @@ export default function App() {
             </svg>
           </div>
         </Modal>
-        
+
         <form>
           {formItems}
           <br></br>
