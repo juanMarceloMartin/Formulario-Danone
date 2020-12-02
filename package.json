@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/juanMarceloMartin/formularioBack.git"
+    "url": "git+https://github.com/juanMarceloMartin/Formulario-Danone.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/juanMarceloMartin/formularioBack/issues"
+    "url": "https://github.com/juanMarceloMartin/Formulario-Danone/issues"
   },
-  "homepage": "https://github.com/juanMarceloMartin/formularioBack#readme",
+  "homepage": "https://github.com/juanMarceloMartin/Formulario-Danone#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "concurrently": "^5.3.0",
